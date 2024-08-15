@@ -1,202 +1,215 @@
-{
-    "meals": [
-      {
-        "name": "Avocado toast with poached eggs",
-        "mealTime": "breakfast",
-        "ingredients": [
-          "whole grain bread",
-          "avocado",
-          "eggs",
-          "salt",
-          "pepper",
-          "olive oil"
-        ],
-        "image": "https://example.com/images/avocado-toast-poached-eggs.jpg"
-      },
-      {
-        "name": "Greek yogurt parfait with granola and berries",
-        "mealTime": "breakfast",
-        "ingredients": ["Greek yogurt", "granola", "mixed berries", "honey"],
-        "image": "https://example.com/images/greek-yogurt-parfait.jpg"
-      },
-      {
-        "name": "Spinach and mushroom frittata",
-        "mealTime": "breakfast",
-        "ingredients": [
-          "eggs",
-          "spinach",
-          "mushrooms",
-          "onion",
-          "cheese",
-          "milk",
-          "salt",
-          "pepper"
-        ],
-        "image": "https://example.com/images/spinach-mushroom-frittata.jpg"
-      },
-      {
-        "name": "Whole grain pancakes with banana and walnuts",
-        "mealTime": "breakfast",
-        "ingredients": [
-          "whole grain flour",
-          "milk",
-          "eggs",
-          "baking powder",
-          "banana",
-          "walnuts",
-          "maple syrup"
-        ],
-        "image": "https://example.com/images/whole-grain-pancakes.jpg"
-      },
-      {
-        "name": "Breakfast burrito with scrambled eggs, black beans, and salsa",
-        "mealTime": "breakfast",
-        "ingredients": [
-          "tortilla",
-          "eggs",
-          "black beans",
-          "salsa",
-          "cheese",
-          "avocado"
-        ],
-        "image": "https://example.com/images/breakfast-burrito.jpg"
-      },
-      {
-        "name": "Grilled chicken Caesar salad",
-        "mealTime": "lunch",
-        "ingredients": [
-          "chicken breast",
-          "romaine lettuce",
-          "croutons",
-          "parmesan cheese",
-          "Caesar dressing"
-        ],
-        "image": "https://example.com/images/chicken-caesar-salad.jpg"
-      },
-      {
-        "name": "Caprese sandwich on ciabatta bread",
-        "mealTime": "lunch",
-        "ingredients": [
-          "ciabatta bread",
-          "mozzarella",
-          "tomatoes",
-          "basil",
-          "balsamic glaze",
-          "olive oil"
-        ],
-        "image": "https://example.com/images/caprese-sandwich.jpg"
-      },
-      {
-        "name": "Lentil and vegetable soup with crusty bread",
-        "mealTime": "lunch",
-        "ingredients": [
-          "lentils",
-          "carrots",
-          "celery",
-          "onion",
-          "garlic",
-          "vegetable broth",
-          "crusty bread"
-        ],
-        "image": "https://example.com/images/lentil-vegetable-soup.jpg"
-      },
-      {
-        "name": "Quinoa bowl with roasted vegetables and feta cheese",
-        "mealTime": "lunch",
-        "ingredients": [
-          "quinoa",
-          "mixed vegetables",
-          "feta cheese",
-          "olive oil",
-          "lemon juice",
-          "herbs"
-        ],
-        "image": "https://example.com/images/quinoa-veggie-bowl.jpg"
-      },
-      {
-        "name": "Tuna salad wrap with mixed greens",
-        "mealTime": "lunch",
-        "ingredients": [
-          "tuna",
-          "mayonnaise",
-          "celery",
-          "onion",
-          "wrap",
-          "mixed greens"
-        ],
-        "image": "https://example.com/images/tuna-salad-wrap.jpg"
-      },
-      {
-        "name": "Baked salmon with asparagus and wild rice",
-        "mealTime": "dinner",
-        "ingredients": [
-          "salmon fillet",
-          "asparagus",
-          "wild rice",
-          "lemon",
-          "olive oil",
-          "herbs"
-        ],
-        "image": "https://example.com/images/baked-salmon-asparagus.jpg"
-      },
-      {
-        "name": "Vegetarian stir-fry with tofu and brown rice",
-        "mealTime": "dinner",
-        "ingredients": [
-          "tofu",
-          "mixed vegetables",
-          "brown rice",
-          "soy sauce",
-          "ginger",
-          "garlic",
-          "sesame oil"
-        ],
-        "image": "https://example.com/images/vegetarian-stir-fry.jpg"
-      },
-      {
-        "name": "Slow-cooker beef stew with root vegetables",
-        "mealTime": "dinner",
-        "ingredients": [
-          "beef chunks",
-          "potatoes",
-          "carrots",
-          "onion",
-          "celery",
-          "beef broth",
-          "tomato paste",
-          "herbs"
-        ],
-        "image": "https://example.com/images/beef-stew.jpg"
-      },
-      {
-        "name": "Grilled portobello mushroom burger with sweet potato fries",
-        "mealTime": "dinner",
-        "ingredients": [
-          "portobello mushrooms",
-          "burger buns",
-          "lettuce",
-          "tomato",
-          "onion",
-          "sweet potatoes",
-          "olive oil",
-          "spices"
-        ],
-        "image": "https://example.com/images/portobello-burger.jpg"
-      },
-      {
-        "name": "Chicken fajitas with bell peppers, onions, and guacamole",
-        "mealTime": "dinner",
-        "ingredients": [
-          "chicken breast",
-          "bell peppers",
-          "onions",
-          "tortillas",
-          "avocado",
-          "lime",
-          "cilantro",
-          "spices"
-        ],
-        "image": "https://example.com/images/chicken-fajitas.jpg"
-      }
-    ]
-}
+[
+  {
+    "id": 1,
+    "name": "Avocado toast with poached eggs",
+    "mealTime": "breakfast",
+    "ingredients": [
+      "whole grain bread",
+      "avocado",
+      "eggs",
+      "salt",
+      "pepper",
+      "olive oil"
+    ],
+    "image": "https://example.com/images/avocado-toast-poached-eggs.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Greek yogurt parfait with granola and berries",
+    "mealTime": "breakfast",
+    "ingredients": ["Greek yogurt", "granola", "mixed berries", "honey"],
+    "image": "https://example.com/images/greek-yogurt-parfait.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Spinach and mushroom frittata",
+    "mealTime": "breakfast",
+    "ingredients": [
+      "eggs",
+      "spinach",
+      "mushrooms",
+      "onion",
+      "cheese",
+      "milk",
+      "salt",
+      "pepper"
+    ],
+    "image": "https://example.com/images/spinach-mushroom-frittata.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Whole grain pancakes with banana and walnuts",
+    "mealTime": "breakfast",
+    "ingredients": [
+      "whole grain flour",
+      "milk",
+      "eggs",
+      "baking powder",
+      "banana",
+      "walnuts",
+      "maple syrup"
+    ],
+    "image": "https://example.com/images/whole-grain-pancakes.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Breakfast burrito with scrambled eggs, black beans, and salsa",
+    "mealTime": "breakfast",
+    "ingredients": [
+      "tortilla",
+      "eggs",
+      "black beans",
+      "salsa",
+      "cheese",
+      "avocado"
+    ],
+    "image": "https://example.com/images/breakfast-burrito.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Grilled chicken Caesar salad",
+    "mealTime": "lunch",
+    "ingredients": [
+      "chicken breast",
+      "romaine lettuce",
+      "croutons",
+      "parmesan cheese",
+      "Caesar dressing"
+    ],
+    "image": "https://example.com/images/chicken-caesar-salad.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Caprese sandwich on ciabatta bread",
+    "mealTime": "lunch",
+    "ingredients": [
+      "ciabatta bread",
+      "mozzarella",
+      "tomatoes",
+      "basil",
+      "balsamic glaze",
+      "olive oil"
+    ],
+    "image": "https://example.com/images/caprese-sandwich.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Lentil and vegetable soup with crusty bread",
+    "mealTime": "lunch",
+    "ingredients": [
+      "lentils",
+      "carrots",
+      "celery",
+      "onion",
+      "garlic",
+      "vegetable broth",
+      "crusty bread"
+    ],
+    "image": "https://example.com/images/lentil-vegetable-soup.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Quinoa bowl with roasted vegetables and feta cheese",
+    "mealTime": "lunch",
+    "ingredients": [
+      "quinoa",
+      "mixed vegetables",
+      "feta cheese",
+      "olive oil",
+      "lemon juice",
+      "herbs"
+    ],
+    "image": "https://example.com/images/quinoa-veggie-bowl.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Tuna salad wrap with mixed greens",
+    "mealTime": "lunch",
+    "ingredients": [
+      "tuna",
+      "mayonnaise",
+      "celery",
+      "onion",
+      "wrap",
+      "mixed greens"
+    ],
+    "image": "https://example.com/images/tuna-salad-wrap.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Baked salmon with asparagus and wild rice",
+    "mealTime": "dinner",
+    "ingredients": [
+      "salmon fillet",
+      "asparagus",
+      "wild rice",
+      "lemon",
+      "olive oil",
+      "herbs"
+    ],
+    "image": "https://example.com/images/baked-salmon-asparagus.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Vegetarian stir-fry with tofu and brown rice",
+    "mealTime": "dinner",
+    "ingredients": [
+      "tofu",
+      "mixed vegetables",
+      "brown rice",
+      "soy sauce",
+      "ginger",
+      "garlic",
+      "sesame oil"
+    ],
+    "image": "https://example.com/images/vegetarian-stir-fry.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Slow-cooker beef stew with root vegetables",
+    "mealTime": "dinner",
+    "ingredients": [
+      "beef chunks",
+      "potatoes",
+      "carrots",
+      "onion",
+      "celery",
+      "beef broth",
+      "tomato paste",
+      "herbs"
+    ],
+    "image": "https://example.com/images/beef-stew.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Grilled portobello mushroom burger with sweet potato fries",
+    "mealTime": "dinner",
+    "ingredients": [
+      "portobello mushrooms",
+      "burger buns",
+      "lettuce",
+      "tomato",
+      "onion",
+      "sweet potatoes",
+      "olive oil",
+      "spices"
+    ],
+    "image": "https://example.com/images/portobello-burger.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Chicken fajitas with bell peppers, onions, and guacamole",
+    "mealTime": "dinner",
+    "ingredients": [
+      "chicken breast",
+      "bell peppers",
+      "onions",
+      "tortillas",
+      "avocado",
+      "lime",
+      "cilantro",
+      "spices"
+    ],
+    "image": "https://example.com/images/chicken-fajitas.jpg"
+  }
+]
