@@ -1,11 +1,13 @@
 import React from "react";
 import Meals from "./Meals";
 
-function MealsCollection() {
+function MealsCollection({ meals }) {
   return (
     <div>
       MealsCollection
-      <Meals />
+      {meals.map((meal) => {
+        return <Meals key={meal.id} meal={meal} />;
+      })}
     </div>
   );
 }
