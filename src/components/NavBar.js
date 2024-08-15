@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom/dist";
+import MealForm from "./MealForm";
 
 function NavBar() {
   return (

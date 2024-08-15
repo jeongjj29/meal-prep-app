@@ -1,7 +1,12 @@
 import React from "react";
+import MealForm from "../components/MealForm";
 
 function NewMeal() {
-  return <div>NewMeal</div>;
+  return (
+    <div>
+      <MealForm />
+    </div>
+  );
 }
 
 export default NewMeal;
