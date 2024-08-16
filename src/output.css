@@ -549,6 +549,10 @@ video {
   margin: 1rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -563,6 +567,18 @@ video {
 
 .h-52 {
   height: 13rem;
+}
+
+.h-56 {
+  height: 14rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .w-auto {
@@ -593,6 +609,10 @@ video {
   grid-auto-flow: column;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -609,6 +629,10 @@ video {
   gap: 1rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .text-wrap {
   text-wrap: wrap;
 }
@@ -623,6 +647,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .italic {

@@ -2,15 +2,18 @@ import React from "react";
 
 function Meals({ meal }) {
   return (
-    <div className="w-56 m-4 border-2 items-center justify-center text-center">
-      <h3 className="meal-title text-wrap">{meal.name}</h3>
+    <div className="w-56 m-4 border-2 text-center">
+      <div className="w-56 h-20 flex items-center justify-center">
+        <h3 className="meal-title text-wrap w-52">{meal.name}</h3>
+      </div>
+
       <img
-        className="w-52 h-52 object-cover"
+        className="w-56 h-56 object-cover"
         src={meal.image}
         alt={meal.name}
       />
+      <h4 className="font-bold">Ingredients:</h4>
       <ul className="">
-        <h4 className="bold">Ingredients:</h4>
         {meal.ingredients.map((ingredient, index) => {
           return (
             <li className="italic" key={ingredient}>
