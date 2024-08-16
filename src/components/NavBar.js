@@ -10,6 +10,9 @@ function NavBar() {
       <NavLink className="navBarLink" to="/new-meal">
         New Meal
       </NavLink>
+      <NavLink className="navBarLink" to="/meal-plan">
+        Meal Plan
+      </NavLink>
     </nav>
   );
 }
