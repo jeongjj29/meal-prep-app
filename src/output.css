@@ -557,6 +557,22 @@ video {
   margin-left: 2rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -585,6 +601,10 @@ video {
   height: 6rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-auto {
   width: auto;
 }
@@ -601,6 +621,10 @@ video {
   width: 14rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .list-disc {
   list-style-type: disc;
 }
@@ -615,6 +639,10 @@ video {
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {
@@ -637,12 +665,35 @@ video {
   gap: 0.5rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
 .text-wrap {
   text-wrap: wrap;
 }
 
 .border-2 {
   border-width: 2px;
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-blue-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -744,4 +795,9 @@ video {
 
 .ingredient-list {
   font-style: italic;
+}
+
+.hover\:bg-blue-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
