@@ -66,3 +66,17 @@
 .navBarLink {
   margin: 8px;
 }
+
+.meal-title {
+  font-weight: bold;
+}
+
+.meal-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* This ensures the image covers the area without distortion */
+}
+
+.ingredient-list {
+  font-style: italic;
+}
