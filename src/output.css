@@ -549,28 +549,12 @@ video {
   margin: 1rem;
 }
 
-.m-auto {
-  margin: auto;
-}
-
-.ml-8 {
-  margin-left: 2rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .flex {
@@ -581,36 +565,12 @@ video {
   display: table;
 }
 
-.grid {
-  display: grid;
-}
-
-.h-52 {
-  height: 13rem;
-}
-
-.h-56 {
-  height: 14rem;
-}
-
 .h-20 {
   height: 5rem;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
-.h-auto {
-  height: auto;
-}
-
-.w-auto {
-  width: auto;
-}
-
-.w-80 {
-  width: 20rem;
+.h-56 {
+  height: 14rem;
 }
 
 .w-52 {
@@ -623,18 +583,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.list-disc {
-  list-style-type: disc;
-}
-
-.auto-cols-max {
-  grid-auto-columns: max-content;
-}
-
-.grid-flow-col {
-  grid-auto-flow: column;
 }
 
 .flex-row {
@@ -661,34 +609,12 @@ video {
   gap: 1rem;
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.self-end {
-  align-self: flex-end;
-}
-
 .text-wrap {
   text-wrap: wrap;
 }
 
 .border-2 {
   border-width: 2px;
-}
-
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
-.bg-blue-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
 
 .bg-blue-100 {
@@ -710,6 +636,10 @@ video {
 
 .italic {
   font-style: italic;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .meal-form {
@@ -790,11 +720,34 @@ video {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  /* This ensures the image covers the area without distortion */
 }
 
 .ingredient-list {
   font-style: italic;
+}
+
+.filter-container {
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: white;
+  background-color: #4caf50;
+  border-radius: 4px;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .hover\:bg-blue-200:hover {
