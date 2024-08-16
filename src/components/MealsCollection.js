@@ -15,15 +15,21 @@ function MealsCollection({ meals }) {
   return (
     <div>
       <div className="filter-container">
-        <label>Filter Meals:</label>
-        <select>
-          <option></option>
-          <option></option>
-          <option></option>
+        <label className="filter-label">Filter Meals:</label>
+        <select
+          id="mealFilter"
+          value={filter}
+          onChange={handleFilterChange}
+          className="filter-select"
+        >
+          <option value="all">All meals</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
         </select>
       </div>
       <div className="flex flex-wrap ">
-        {meals.map((meal) => {
+        {filteredMeals.map((meal) => {
           return <Meals key={meal.id} meal={meal} />;
         })}
       </div>
