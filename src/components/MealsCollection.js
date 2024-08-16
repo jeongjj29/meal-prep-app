@@ -3,8 +3,7 @@ import Meals from "./Meals";
 
 function MealsCollection({ meals }) {
   return (
-    <div>
-      MealsCollection
+    <div className="flex flex-wrap ">
       {meals.map((meal) => {
         return <Meals key={meal.id} meal={meal} />;
       })}

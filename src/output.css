@@ -545,8 +545,60 @@ video {
   --tw-contain-style:  ;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
+.ml-8 {
+  margin-left: 2rem;
+}
+
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.h-52 {
+  height: 13rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.auto-cols-max {
+  grid-auto-columns: max-content;
+}
+
+.grid-flow-col {
+  grid-auto-flow: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .justify-center {
@@ -557,24 +609,107 @@ video {
   gap: 1rem;
 }
 
-.rounded {
-  border-radius: 0.25rem;
+.text-wrap {
+  text-wrap: wrap;
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+.border-2 {
+  border-width: 2px;
 }
 
-.p-4 {
-  padding: 1rem;
+.object-cover {
+  object-fit: cover;
 }
 
-.font-bold {
-  font-weight: 700;
+.text-center {
+  text-align: center;
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+.italic {
+  font-style: italic;
+}
+
+.meal-form {
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 4px;
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 4px;
+}
+
+.navBarLink {
+  margin: 8px;
+}
+
+.meal-title {
+  font-weight: bold;
+}
+
+.meal-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  /* This ensures the image covers the area without distortion */
+}
+
+.ingredient-list {
+  font-style: italic;
 }
