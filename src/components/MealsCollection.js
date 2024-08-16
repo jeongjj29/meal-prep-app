@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Meals from "./Meals";
+import "../index.css";
 
 function MealsCollection({ meals }) {
   const [filter, setFilter] = useState("all");

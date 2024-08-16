@@ -84,3 +84,23 @@
 .ingredient-list {
   font-style: italic;
 }
+
+.filter-container {
+  margin-bottom: 1rem;
+  width: 20%;
+}
+
+.filter-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #4caf50;
+  border-radius: 4px;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
