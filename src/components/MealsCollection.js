@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Meals from "./Meals";
 import "../index.css";
 
-function MealsCollection({ meals, onDeleteMeal }) {
+function MealsCollection({ meals, onDeleteMeal, onAddToMealPlan }) {
   const [filter, setFilter] = useState("all");
 
   const filteredMeals =
@@ -20,10 +20,7 @@ function MealsCollection({ meals, onDeleteMeal }) {
 
   return (
     <div>
-      <div className="filter-container">
-        <label htmlFor="mealFilter" className="filter-label">
-          Filter Meals:
-        </label>
+      <div className="text-center mb-4 w-1/4 ml-auto mr-auto mt-8">
         <select
           id="mealFilter"
           value={filter}
@@ -36,9 +33,16 @@ function MealsCollection({ meals, onDeleteMeal }) {
           <option value="dinner">Dinner</option>
         </select>
       </div>
-      <div className="flex flex-wrap ">
+      <div className="flex flex-wrap justify-center">
         {filteredMeals.map((meal) => {
-          return <Meals key={meal.id} meal={meal} onDelete={handleDelete} />;
+          return (
+            <Meals
+              key={meal.id}
+              meal={meal}
+              onDelete={handleDelete}
+              onAddToMealPlan={onAddToMealPlan}
+            />
+          );
         })}
       </div>
     </div>
