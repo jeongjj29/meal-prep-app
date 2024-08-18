@@ -9,6 +9,7 @@ function Home() {
       .then((r) => r.json())
       .then((data) => setMeals(data));
   }, []);
+
   const handleDeleteMeal = (deletedMealId) => {
     setMeals((prevMeals) =>
       prevMeals.filter((meal) => meal.id !== deletedMealId)
