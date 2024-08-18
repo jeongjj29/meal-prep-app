@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import Meals from "./Meals";
 import "../index.css";
 
-function MealsCollection({ meals, onDeleteMeal, onAddToMealPlan }) {
+function MealsCollection({
+  meals,
+  onDeleteMeal,
+  onAddToMealPlan,
+  onUpdateIngredients,
+}) {
   const [filter, setFilter] = useState("all");
 
   const filteredMeals =
@@ -41,6 +46,7 @@ function MealsCollection({ meals, onDeleteMeal, onAddToMealPlan }) {
               meal={meal}
               onDelete={handleDelete}
               onAddToMealPlan={onAddToMealPlan}
+              onUpdateIngredients={onUpdateIngredients}
             />
           );
         })}

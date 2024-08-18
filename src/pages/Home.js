@@ -71,6 +71,14 @@ function Home() {
     setMealPlan(updatedMealPlan);
   };
 
+  const onUpdateIngredients = (mealId, updatedIngredients) => {
+    setMeals((prevMeals) =>
+      prevMeals.map((meal) =>
+        meal.id === mealId ? { ...meal, ingredients: updatedIngredients } : meal
+      )
+    );
+  };
+
   return (
     <div className="">
       <Table mealPlan={mealPlan} />
@@ -78,6 +86,7 @@ function Home() {
         meals={meals}
         onDeleteMeal={handleDeleteMeal}
         onAddToMealPlan={onAddToMealPlan}
+        onUpdateIngredients={onUpdateIngredients}
       />
     </div>
   );
