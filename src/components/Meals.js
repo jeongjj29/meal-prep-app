@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-function Meals({ meal, onDelete, onAddToMealPlan }) {
+function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
   const [showForm, setShowForm] = useState(false);
   const [mealTime, setMealTime] = useState("breakfast");
   const [day, setDay] = useState("sunday");
+  const [showIngredientForm, setShowIngredientForm] = useState(false);
+  const [ingredients, setIngredients] = useState(meal.ingredients.join(", "));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +32,28 @@ function Meals({ meal, onDelete, onAddToMealPlan }) {
     });
   };
 
+  const handleUpdateIngredients = (e) => {
+    e.preventDefault();
+    const updatedIngredients = ingredients
+      .split(",")
+      .map((item) => item.trim());
+
+    fetch(`https://meal-app-server.onrender.com/meals/${meal.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ingredients: updatedIngredients,
+      }),
+    }).then((response) => {
+      if (response.ok) {
+        onUpdateIngredients(meal.id, updatedIngredients);
+        setShowIngredientForm(false);
+      }
+    });
+  };
+
   return (
     <div className="w-56 m-4 border-2 text-center flex flex-col">
       <div className="w-56 h-20 flex items-center justify-center">
@@ -45,16 +69,39 @@ function Meals({ meal, onDelete, onAddToMealPlan }) {
         <div className="w-56 h-56"></div>
       )}
 
-      {/* <h4 className="font-bold">Ingredients:</h4>
-      <ul className="flex flex-row flex-wrap gap-4 justify-center mb-4">
-        {meal.ingredients.map((ingredient, index) => {
-          return (
-            <li className="italic" key={ingredient}>
-              {ingredient}
-            </li>
-          );
-        })}
-      </ul> */}
+      <h4 className="font-bold mt-2">Ingredients:</h4>
+      <ul className="flex flex-col gap-1 mb-2">
+        {meal.ingredients.map((ingredient, index) => (
+          <li className="italic" key={index}>
+            {ingredient}
+          </li>
+        ))}
+      </ul>
+
+      {showIngredientForm ? (
+        <form onSubmit={handleUpdateIngredients} className="mt-2">
+          <textarea
+            value={ingredients}
+            onChange={(e) => setIngredients(e.target.value)}
+            className="w-full p-1 border rounded"
+            rows="3"
+          />
+          <button
+            type="submit"
+            className="bg-green-500 text-white font-bold hover:bg-green-600 mt-2 w-full"
+          >
+            Update Ingredients
+          </button>
+        </form>
+      ) : (
+        <button
+          onClick={() => setShowIngredientForm(true)}
+          className="mt-2 bg-green-500 text-white font-bold hover:bg-green-600"
+        >
+          Edit Ingredients
+        </button>
+      )}
+
       {showForm ? (
         <form className="mt-4" onSubmit={handleSubmit}>
           <select
