@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Meals({ meal }) {
+function Meals({ meal, onDelete }) {
   const [showForm, setShowForm] = useState(false);
   const [mealTime, setMealTime] = useState("breakfast");
   const [day, setDay] = useState("sunday");
@@ -19,6 +19,15 @@ function Meals({ meal }) {
     }).then(() => {
       setShowForm(false);
     });
+  };
+
+  const handleDelete = () => {
+    fetch(`https://meal-app-server.onrender.com/meals/${meal.id}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+          onDelete(meal.id);
+        })
   };
 
   return (
@@ -78,6 +87,12 @@ function Meals({ meal }) {
           Add to Meal Plan
         </button>
       )}
+      <button
+        onClick={handleDelete}
+        className="mt-2 bg-red-500 text-white font-bold hover:bg-red-600"
+      >
+        Delete Meal
+      </button>
     </div>
   );
 }

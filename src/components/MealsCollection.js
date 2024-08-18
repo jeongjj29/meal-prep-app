@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Meals from "./Meals";
 import "../index.css";
 
-function MealsCollection({ meals }) {
+function MealsCollection({ meals, onDeleteMeal }) {
   const [filter, setFilter] = useState("all");
 
   const filteredMeals =
@@ -12,6 +12,10 @@ function MealsCollection({ meals }) {
 
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
+  };
+
+  const handleDelete = (mealId) => {
+    onDeleteMeal(mealId);
   };
 
   return (
@@ -26,7 +30,7 @@ function MealsCollection({ meals }) {
           onChange={handleFilterChange}
           className="filter-select"
         >
-          <option value="all">All meals</option>
+          <option value="all">All Meals</option>
           <option value="breakfast">Breakfast</option>
           <option value="lunch">Lunch</option>
           <option value="dinner">Dinner</option>
@@ -34,7 +38,7 @@ function MealsCollection({ meals }) {
       </div>
       <div className="flex flex-wrap ">
         {filteredMeals.map((meal) => {
-          return <Meals key={meal.id} meal={meal} />;
+          return <Meals key={meal.id} meal={meal} onDelete={handleDelete} />;
         })}
       </div>
     </div>
