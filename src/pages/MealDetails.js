@@ -1,5 +1,6 @@
 import React, {useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "../index.css";
 
 function MealDetails() {
   const location = useLocation();
@@ -40,53 +41,44 @@ function MealDetails() {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="text-5xl font-semibold mt-8 mb-4 text-center">{name}</h1>
-      <h2 className="text-2xl mb-4">Meal Time: {mealTime}</h2>
+    <div className="mealdetail-details">
+      <h1 className="mealdetail-title">{name}</h1>
+      <h2 className="mealdetail-time">Meal Time: {mealTime}</h2>
       {image === "" ? (
         <img
-          className="w-1/4 h-1/4 mb-2"
+          className="mealdetail-image"
           src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
           alt="Not Available"
         />
       ) : (
-        <img className="w-1/4 h-1/4 mb-2" src={image} alt={name} />
+        <img className="mealdetail-image" src={image} alt={name} />
       )}
-      <div className="flex flex-row gap-4 mb-8">
-        <button
-          className="bg-green-500 text-white font-bold hover:bg-green-600 mt-2 w-24"
-          onClick={() => setShowForm(!showForm)}
-        >
+      <div className="button-group">
+        <button className="edit-button" onClick={() => setShowForm(!showForm)}>
           Edit
         </button>
-        <button
-          className="bg-red-500 text-white font-bold hover:bg-red-600 mt-2 w-24"
-          onClick={handleDelete}
-        >
+        <button className="delete-button" onClick={handleDelete}>
           Delete
         </button>
       </div>
       <div>
         {showForm ? (
-          <form onSubmit={handleUpdateIngredients} className="mt-2">
+          <form onSubmit={handleUpdateIngredients} className="update-form">
             <textarea
               value={ingredientsList.join(",")}
               onChange={handleChange}
-              className="w-full p-1 border rounded"
+              className="form-input"
               rows="3"
             />
-            <button
-              type="submit"
-              className="bg-green-500 text-white font-bold hover:bg-green-600 mt-2 w-full"
-            >
+            <button type="submit" className="submit-button">
               Update Ingredients
             </button>
           </form>
         ) : null}
       </div>
       <div>
-        <h4 className="text-3xl">Ingredients:</h4>
-        <ul className="list-disc">
+        <h4 className="ingredients-title">Ingredients:</h4>
+        <ul className="ingredient-list">
           {ingredientsList.map((ingredient) => (
             <li className="ml-8" key={ingredient}>
               {ingredient}
