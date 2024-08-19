@@ -3,7 +3,7 @@ import Table from "../components/Table";
 
 function MealPlan() {
   return (
-    <div>
+    <div className="flex justify-center">
       <Table />
     </div>
   );
