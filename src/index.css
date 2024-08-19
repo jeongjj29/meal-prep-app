@@ -108,3 +108,23 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.meal-plan-table {
+  @apply table-auto border-collapse border border-slate-500 w-11/12 mt-8 mx-auto text-center bg-white shadow-lg rounded-lg overflow-hidden;
+}
+
+.meal-plan-table-header {
+  @apply bg-green-500 text-white;
+}
+
+.meal-plan-table-cell {
+  @apply border border-slate-600 py-3 px-4;
+}
+
+.meal-plan-table-row-alt {
+  @apply bg-gray-100;
+}
+
+.meal-plan-table-meal-header {
+  @apply border border-slate-600 py-3 px-4 font-semibold text-gray-700;
+}
