@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom/dist";
+import "../index.css";
 
 function NavBar() {
   return (
-    <nav className="flex justify-center gap-4">
+    <nav className="nav-bar">
       <NavLink className="navBarLink" to="/">
         Home
       </NavLink>

@@ -50,7 +50,7 @@ const MealForm = () => {
   return (
     <form onSubmit={handleSubmit} className="meal-form">
       <div className="form-group">
-        <h2 className="form-header">Add a Meal</h2>
+        <h2 className="form-header">Create Your Own Meal</h2>
         <label htmlFor="mealName" className="form-label">
           Meal Name
         </label>

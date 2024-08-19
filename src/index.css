@@ -68,7 +68,15 @@
   border-radius: 4px;
 }
 .navBarLink {
-  margin: 8px;
+  @apply bg-green-500 text-white;
+  @apply border border-slate-600 py-3 px-4;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .meal-title {
