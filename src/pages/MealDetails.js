@@ -55,10 +55,10 @@ function MealDetails() {
       )}
       <div className="button-group">
         <button className="edit-button" onClick={() => setShowForm(!showForm)}>
-          Edit
+          Change Ingredient List
         </button>
         <button className="delete-button" onClick={handleDelete}>
-          Delete
+          Remove Meal Permanently
         </button>
       </div>
       <div>
