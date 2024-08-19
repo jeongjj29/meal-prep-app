@@ -9,9 +9,7 @@
 }
 
 .form-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
+ @apply text-4xl font-semibold mt-8 mb-4 text-center;
 }
 
 .form-group {
