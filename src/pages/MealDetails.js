@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../index.css";
 
@@ -53,14 +53,6 @@ function MealDetails() {
       ) : (
         <img className="mealdetail-image" src={image} alt={name} />
       )}
-      <div className="button-group">
-        <button className="edit-button" onClick={() => setShowForm(!showForm)}>
-          Change Ingredient List
-        </button>
-        <button className="delete-button" onClick={handleDelete}>
-          Remove Meal Permanently
-        </button>
-      </div>
       <div>
         {showForm ? (
           <form onSubmit={handleUpdateIngredients} className="update-form">
@@ -85,6 +77,14 @@ function MealDetails() {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="button-group">
+        <button className="edit-button" onClick={() => setShowForm(!showForm)}>
+          Change Ingredient List
+        </button>
+        <button className="delete-button" onClick={handleDelete}>
+          Remove Meal Permanently
+        </button>
       </div>
     </div>
   );
