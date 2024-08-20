@@ -5,7 +5,8 @@ import "../index.css";
 function MealDetails() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { id, image, ingredients, mealTime, name } = location.state;
+  const { id, image, ingredients, mealTime, name, calories, recipe } =
+    location.state;
   const [showForm, setShowForm] = useState(false);
   const [ingredientsList, setIngredientsList] = useState(ingredients);
 
@@ -42,7 +43,9 @@ function MealDetails() {
 
   return (
     <div className="flex flex-col items-center p-8">
-      <h1 className="text-4xl font-semibold mt-8 mb-4 text-center">{name}</h1>
+      <h1 className="text-5xl font-semibold mt-8 mb-4 text-center w-3/4">
+        {name}
+      </h1>
       <h2 className="text-2xl mb-4">Meal Time: {mealTime}</h2>
       {image === "" ? (
         <img
@@ -68,15 +71,13 @@ function MealDetails() {
           </form>
         ) : null}
       </div>
-      <div>
-        <h4 className="text-3xl mb-2">Ingredients:</h4>
-        <ul className="list-disc pl-8 mb-8">
-          {ingredientsList.map((ingredient) => (
-            <li className="ml-8" key={ingredient}>
-              {ingredient}
-            </li>
-          ))}
-        </ul>
+      <div className="flex flex-col items-center p-4 w-1/2 text-center">
+        <h3 className="text-4xl mb-4">Calories: </h3>
+        <p className="text-2xl mb-4">{calories}</p>
+        <h3 className="text-4xl mb-4">Ingredients:</h3>
+        <p className="text-2xl mb-4">{ingredientsList.join(", ")}</p>
+        <h3 className="text-4xl mb-4">Recipe: </h3>
+        <p className="text-2xl mb-4">{recipe}</p>
       </div>
       <div className="flex justify-center gap-4 pad-4">
         <button className="edit-button" onClick={() => setShowForm(!showForm)}>
