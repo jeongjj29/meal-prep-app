@@ -43,7 +43,15 @@ function MealDetails() {
     <div className="flex flex-col items-center">
       <h1 className="text-5xl font-semibold mt-8 mb-4 text-center">{name}</h1>
       <h2 className="text-2xl mb-4">Meal Time: {mealTime}</h2>
-      <img className="w-1/4 mb-2" src={image} alt={name} />
+      {image === "" ? (
+        <img
+          className="w-1/4 h-1/4 mb-2"
+          src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
+          alt="Not Available"
+        />
+      ) : (
+        <img className="w-1/4 h-1/4 mb-2" src={image} alt={name} />
+      )}
       <div className="flex flex-row gap-4 mb-8">
         <button
           className="bg-green-500 text-white font-bold hover:bg-green-600 mt-2 w-24"

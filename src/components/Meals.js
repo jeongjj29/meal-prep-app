@@ -5,8 +5,6 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
   const [showForm, setShowForm] = useState(false);
   const [mealTime, setMealTime] = useState("breakfast");
   const [day, setDay] = useState("sunday");
-  const [showIngredientForm, setShowIngredientForm] = useState(false);
-  const [ingredients, setIngredients] = useState(meal.ingredients.join(", "));
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -43,7 +41,16 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
           }}
         />
       ) : (
-        <div className="w-56 h-56"></div>
+        <img
+          className="w-56 h-56 object-cover"
+          src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
+          alt="Not Available"
+          onClick={() => {
+            navigate(`/meal-details/${meal.id}`, {
+              state: { ...meal },
+            });
+          }}
+        />
       )}
 
       {showForm ? (
