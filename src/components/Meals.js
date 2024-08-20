@@ -26,28 +26,6 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
     });
   };
 
-  const handleUpdateIngredients = (e) => {
-    e.preventDefault();
-    const updatedIngredients = ingredients
-      .split(",")
-      .map((item) => item.trim());
-
-    fetch(`https://meal-app-server.onrender.com/meals/${meal.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ingredients: updatedIngredients,
-      }),
-    }).then((response) => {
-      if (response.ok) {
-        onUpdateIngredients(meal.id, updatedIngredients);
-        setShowIngredientForm(false);
-      }
-    });
-  };
-
   return (
     <div className="w-56 m-4 border-2 text-center flex flex-col">
       <div className="w-56 h-20 flex items-center justify-center">
@@ -66,30 +44,6 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
         />
       ) : (
         <div className="w-56 h-56"></div>
-      )}
-
-      {showIngredientForm ? (
-        <form onSubmit={handleUpdateIngredients} className="mt-2">
-          <textarea
-            value={ingredients}
-            onChange={(e) => setIngredients(e.target.value)}
-            className="w-full p-1 border rounded"
-            rows="3"
-          />
-          <button
-            type="submit"
-            className="bg-green-500 text-white font-bold hover:bg-green-600 mt-2 w-full"
-          >
-            Update Ingredients
-          </button>
-        </form>
-      ) : (
-        <button
-          onClick={() => setShowIngredientForm(true)}
-          className="mt-2 bg-green-500 text-white font-bold hover:bg-green-600"
-        >
-          Edit Ingredients
-        </button>
       )}
 
       {showForm ? (
