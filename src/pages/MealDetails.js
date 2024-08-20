@@ -41,17 +41,17 @@ function MealDetails() {
   };
 
   return (
-    <div className="mealdetail-details">
-      <h1 className="mealdetail-title">{name}</h1>
-      <h2 className="mealdetail-time">Meal Time: {mealTime}</h2>
+    <div className="flex flex-col items-center p-8">
+      <h1 className="text-4xl font-semibold mt-8 mb-4 text-center">{name}</h1>
+      <h2 className="text-2xl mb-4">Meal Time: {mealTime}</h2>
       {image === "" ? (
         <img
-          className="mealdetail-image"
+          className="w-1/2 h-auto mb-2"
           src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
           alt="Not Available"
         />
       ) : (
-        <img className="mealdetail-image" src={image} alt={name} />
+        <img className="w-1/2 h-auto mb-2" src={image} alt={name} />
       )}
       <div>
         {showForm ? (
@@ -69,8 +69,8 @@ function MealDetails() {
         ) : null}
       </div>
       <div>
-        <h4 className="ingredients-title">Ingredients:</h4>
-        <ul className="ingredient-list">
+        <h4 className="text-3xl mb-2">Ingredients:</h4>
+        <ul className="list-disc pl-8 mb-8">
           {ingredientsList.map((ingredient) => (
             <li className="ml-8" key={ingredient}>
               {ingredient}
@@ -78,7 +78,7 @@ function MealDetails() {
           ))}
         </ul>
       </div>
-      <div className="button-group">
+      <div className="flex justify-center gap-4 pad-4">
         <button className="edit-button" onClick={() => setShowForm(!showForm)}>
           Change Ingredient List
         </button>

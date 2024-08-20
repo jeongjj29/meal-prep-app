@@ -9,7 +9,7 @@
 }
 
 .form-header {
- @apply text-4xl font-semibold mt-8 mb-4 text-center;
+  @apply text-4xl font-semibold mt-8 mb-4 text-center;
 }
 
 .form-group {
@@ -187,7 +187,7 @@
 }
 
 .mealdetail-image {
-  @apply w-1/2 h-auto mb-2;
+  @apply w-3/4 h-auto mb-2;
 }
 
 .ingredients-title {
