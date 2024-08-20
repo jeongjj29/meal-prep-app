@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
   const [showForm, setShowForm] = useState(false);
@@ -6,6 +7,7 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
   const [day, setDay] = useState("sunday");
   const [showIngredientForm, setShowIngredientForm] = useState(false);
   const [ingredients, setIngredients] = useState(meal.ingredients.join(", "));
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,7 +29,7 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
   const handleDelete = () => {
     fetch(`https://meal-app-server.onrender.com/meals/${meal.id}`, {
       method: "DELETE",
-    }).then((response) => {
+    }).then(() => {
       onDelete(meal.id);
     });
   };
@@ -64,6 +66,11 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
           className="w-56 h-56 object-cover"
           src={meal.image}
           alt={meal.name}
+          onClick={() => {
+            navigate(`/meal-details/${meal.id}`, {
+              state: { ...meal },
+            });
+          }}
         />
       ) : (
         <div className="w-56 h-56"></div>
