@@ -71,13 +71,19 @@ function MealDetails() {
           </form>
         ) : null}
       </div>
-      <div className="flex flex-col items-center p-4 w-1/2 text-center">
-        <h3 className="text-4xl mb-4">Calories:</h3>
-        <p className="text-2xl mb-4">{calories}</p>
-        <h3 className="text-4xl mb-4">Ingredients:</h3>
-        <p className="text-2xl mb-4">{ingredientsList.join(", ")}</p>
-        <h3 className="text-4xl mb-4">Recipe:</h3>
-        <p className="text-2xl mb-4">{recipe}</p>
+      <div className="flex flex-col items-center space-y-6 w-full text-center">
+        <div className="w-full bg-red-100 rounded-lg p-4">
+          <h3 className="text-3xl font-bold mb-2">Calories:</h3>
+          <p className="text-xl">{calories}</p>
+        </div>
+        <div className="w-full bg-green-100 rounded-lg p-4">
+          <h3 className="text-3xl font-bold mb-2">Ingredients:</h3>
+          <p className="text-xl">{ingredientsList.join(", ")}</p>
+        </div>
+        <div className="w-full bg-blue-100 rounded-lg p-4">
+          <h3 className="text-3xl font-bold mb-2">Recipe:</h3>
+          <p className="text-xl">{recipe}</p>
+        </div>
       </div>
       <div className="flex justify-center gap-4 pad-4">
         <button className="edit-button" onClick={() => setShowForm(!showForm)}>
