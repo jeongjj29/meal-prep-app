@@ -43,10 +43,12 @@ function MealDetails() {
 
   return (
     <div className="flex flex-col items-center p-8">
-      <h1 className="text-5xl font-semibold mt-8 mb-4 text-center w-3/4">
+      <h1 className="text-5xl font-semibold mt-8 mb-4 text-center w-3/4 w-full bg-green-100 rounded-lg p-4">
         {name}
       </h1>
-      <h2 className="text-2xl mb-4">Meal Time: {mealTime}</h2>
+      <h2 className="text-2xl mb-4 bg-blue-100 rounded">
+        Meal Time: {mealTime}
+      </h2>
       {image === "" ? (
         <img
           className="w-1/2 h-auto mb-2"
