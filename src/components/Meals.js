@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Meals({ meal, onDelete }) {
+function Meals({ meal, onDelete, onAddToMealPlan }) {
   const [showForm, setShowForm] = useState(false);
   const [mealTime, setMealTime] = useState("breakfast");
   const [day, setDay] = useState("sunday");
@@ -18,16 +18,16 @@ function Meals({ meal, onDelete }) {
       }),
     }).then(() => {
       setShowForm(false);
+      onAddToMealPlan(day, mealTime, meal.name);
     });
   };
 
   const handleDelete = () => {
     fetch(`https://meal-app-server.onrender.com/meals/${meal.id}`, {
       method: "DELETE",
-    })
-      .then((response) => {
-          onDelete(meal.id);
-        })
+    }).then((response) => {
+      onDelete(meal.id);
+    });
   };
 
   return (
@@ -45,7 +45,7 @@ function Meals({ meal, onDelete }) {
         <div className="w-56 h-56"></div>
       )}
 
-      <h4 className="font-bold">Ingredients:</h4>
+      {/* <h4 className="font-bold">Ingredients:</h4>
       <ul className="flex flex-row flex-wrap gap-4 justify-center mb-4">
         {meal.ingredients.map((ingredient, index) => {
           return (
@@ -54,9 +54,9 @@ function Meals({ meal, onDelete }) {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
       {showForm ? (
-        <form className="mt-auto" onSubmit={handleSubmit}>
+        <form className="mt-4" onSubmit={handleSubmit}>
           <select
             value={mealTime}
             onChange={(e) => setMealTime(e.target.value)}
@@ -82,7 +82,7 @@ function Meals({ meal, onDelete }) {
       ) : (
         <button
           onClick={() => setShowForm(!showForm)}
-          className="mt-auto bg-blue-100 font-bold hover:bg-blue-200"
+          className="mt-4 bg-blue-100 font-bold hover:bg-blue-200"
         >
           Add to Meal Plan
         </button>
