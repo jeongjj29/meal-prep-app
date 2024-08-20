@@ -18,7 +18,7 @@ const MealForm = () => {
       name: mealName,
       mealTime: mealTime,
       ingredients: ingredients.split(",").map((i) => i.trim()),
-      image: imageUrl || "https://example.com/images/default-meal.jpg",
+      image: imageUrl || "",
     };
 
     try {

@@ -26,14 +26,6 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
     });
   };
 
-  const handleDelete = () => {
-    fetch(`https://meal-app-server.onrender.com/meals/${meal.id}`, {
-      method: "DELETE",
-    }).then(() => {
-      onDelete(meal.id);
-    });
-  };
-
   const handleUpdateIngredients = (e) => {
     e.preventDefault();
     const updatedIngredients = ingredients
@@ -75,15 +67,6 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
       ) : (
         <div className="w-56 h-56"></div>
       )}
-
-      <h4 className="font-bold mt-2">Ingredients:</h4>
-      <ul className="flex flex-col gap-1 mb-2">
-        {meal.ingredients.map((ingredient, index) => (
-          <li className="italic" key={index}>
-            {ingredient}
-          </li>
-        ))}
-      </ul>
 
       {showIngredientForm ? (
         <form onSubmit={handleUpdateIngredients} className="mt-2">
@@ -141,12 +124,6 @@ function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
           Add to Meal Plan
         </button>
       )}
-      <button
-        onClick={handleDelete}
-        className="mt-2 bg-red-500 text-white font-bold hover:bg-red-600"
-      >
-        Delete Meal
-      </button>
     </div>
   );
 }
