@@ -8,10 +8,7 @@ function NavBar() {
         Home
       </NavLink>
       <NavLink className="navBarLink" to="/new-meal">
-        New Meal
-      </NavLink>
-      <NavLink className="navBarLink" to="/meal-plan">
-        Meal Plan
+        Add New Meal
       </NavLink>
     </nav>
   );
