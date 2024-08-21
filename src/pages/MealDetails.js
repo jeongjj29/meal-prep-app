@@ -72,11 +72,11 @@ function MealDetails() {
         ) : null}
       </div>
       <div className="flex flex-col items-center p-4 w-1/2 text-center">
-        <h3 className="text-4xl mb-4">Calories: </h3>
+        <h3 className="text-4xl mb-4">Calories:</h3>
         <p className="text-2xl mb-4">{calories}</p>
         <h3 className="text-4xl mb-4">Ingredients:</h3>
         <p className="text-2xl mb-4">{ingredientsList.join(", ")}</p>
-        <h3 className="text-4xl mb-4">Recipe: </h3>
+        <h3 className="text-4xl mb-4">Recipe:</h3>
         <p className="text-2xl mb-4">{recipe}</p>
       </div>
       <div className="flex justify-center gap-4 pad-4">
