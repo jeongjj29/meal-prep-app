@@ -174,3 +174,33 @@
   gap: 1rem;
   padding: 1rem;
 }
+.mealdetail-details {
+  @apply flex flex-col items-center p-8;
+}
+
+.mealdetail-title {
+  @apply text-4xl font-semibold mt-8 mb-4 text-center;
+}
+
+.mealdetail-time {
+  @apply text-2xl mb-4;
+}
+
+.mealdetail-image {
+  @apply w-3/4 h-auto mb-2;
+}
+
+.ingredients-title {
+  @apply text-3xl mb-2;
+}
+
+.ingredient-list {
+  @apply list-disc pl-8;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
