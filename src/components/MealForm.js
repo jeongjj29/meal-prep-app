@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "../index.css";
+import { useNavigate } from "react-router-dom";
 
 const MealForm = () => {
   const [mealName, setMealName] = useState("");
   const [mealTime, setMealTime] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,6 +43,8 @@ const MealForm = () => {
         setMealTime("");
         setIngredients("");
         setImageUrl("");
+
+        navigate("/");
       }
     } catch (error) {
       console.error("Error:", error);
