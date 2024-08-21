@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Meals({ meal, onDelete, onAddToMealPlan, onUpdateIngredients }) {
+function Meals({ meal, onAddToMealPlan }) {
   const [showForm, setShowForm] = useState(false);
   const [mealTime, setMealTime] = useState("breakfast");
   const [day, setDay] = useState("sunday");
