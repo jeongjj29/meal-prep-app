@@ -3,7 +3,7 @@ import "../index.css";
 
 function Table({ mealPlan }) {
   return (
-    <table className="meal-plan-table">
+    <table className="table-auto border-collapse border border-slate-500 w-3/4 mt-8 mx-auto text-center bg-white shadow-lg rounded-lg overflow-hidden">
       <thead className="meal-plan-table-header">
         <tr>
           <th className="meal-plan-table-cell"></th>

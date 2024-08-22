@@ -31,7 +31,7 @@ function Meals({ meal, onAddToMealPlan }) {
       </div>
       {meal.image ? (
         <img
-          className="w-56 h-56 object-cover"
+          className="w-56 h-56 object-cover border-t-2 border-sky-200"
           src={meal.image}
           alt={meal.name}
           onClick={() => {
@@ -42,7 +42,7 @@ function Meals({ meal, onAddToMealPlan }) {
         />
       ) : (
         <img
-          className="w-56 h-56 object-cover"
+          className="w-56 h-56 object-cover border-t-2 border-sky-200"
           src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
           alt="Not Available"
           onClick={() => {
@@ -54,7 +54,7 @@ function Meals({ meal, onAddToMealPlan }) {
       )}
 
       {showForm ? (
-        <form className="mt-4" onSubmit={handleSubmit}>
+        <form className="" onSubmit={handleSubmit}>
           <select
             value={mealTime}
             onChange={(e) => setMealTime(e.target.value)}
@@ -80,7 +80,7 @@ function Meals({ meal, onAddToMealPlan }) {
       ) : (
         <button
           onClick={() => setShowForm(!showForm)}
-          className="mt-4 bg-blue-100 font-bold hover:bg-blue-200"
+          className="bg-blue-100 font-bold hover:bg-blue-200"
         >
           Add to Meal Plan
         </button>
