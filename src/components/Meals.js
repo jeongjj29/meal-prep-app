@@ -25,7 +25,7 @@ function Meals({ meal, onAddToMealPlan }) {
   };
 
   return (
-    <div className="w-56 m-4 border-2 text-center flex flex-col">
+    <div className="w-56 m-4 border-2 border-sky-200 text-center flex flex-col rounded">
       <div className="w-56 h-20 flex items-center justify-center">
         <h3 className="meal-title text-wrap w-52">{meal.name}</h3>
       </div>

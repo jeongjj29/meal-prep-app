@@ -87,7 +87,7 @@ function MealDetails() {
           <p className="text-xl">{recipe}</p>
         </div>
       </div>
-      <div className="flex justify-center gap-4 pad-4">
+      <div className="flex justify-center gap-4 pad-4 mt-8">
         <button className="edit-button" onClick={() => setShowForm(!showForm)}>
           Change Ingredient List
         </button>
