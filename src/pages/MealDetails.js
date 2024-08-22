@@ -43,12 +43,10 @@ function MealDetails() {
 
   return (
     <div className="flex flex-col items-center p-8">
-      <h1 className="text-5xl font-semibold mt-8 mb-4 text-center w-3/4 w-full bg-green-100 rounded-lg p-4">
+      <h1 className="text-5xl font-semibold mt-8 mb-4 text-center w-1/2 bg-green-100 rounded-lg p-4">
         {name}
       </h1>
-      <h2 className="text-2xl mb-4 bg-blue-100 rounded">
-        Meal Time: {mealTime}
-      </h2>
+      <h2 className="text-2xl mb-4 rounded">Meal Time: {mealTime}</h2>
       {image === "" ? (
         <img
           className="w-1/2 h-auto mb-2"
@@ -73,7 +71,7 @@ function MealDetails() {
           </form>
         ) : null}
       </div>
-      <div className="flex flex-col items-center space-y-6 w-full text-center">
+      <div className="flex flex-col items-center space-y-6 w-1/2 text-center">
         <div className="w-full bg-red-100 rounded-lg p-4">
           <h3 className="text-3xl font-bold mb-2">Calories:</h3>
           <p className="text-xl">{calories}</p>
